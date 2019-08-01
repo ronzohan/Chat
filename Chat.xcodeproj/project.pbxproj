@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,14 @@
 		6BD325FE22F328F70089DF1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD325FC22F328F70089DF1B /* LaunchScreen.storyboard */; };
 		6BD3260922F328F70089DF1B /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3260822F328F70089DF1B /* ChatTests.swift */; };
 		6BD3261422F328F70089DF1B /* ChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3261322F328F70089DF1B /* ChatUITests.swift */; };
+		6BD3262E22F32D9F0089DF1B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262622F32D9F0089DF1B /* RxDataSources.framework */; };
+		6BD3262F22F32D9F0089DF1B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262722F32D9F0089DF1B /* RxRelay.framework */; };
+		6BD3263022F32D9F0089DF1B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262822F32D9F0089DF1B /* Differentiator.framework */; };
+		6BD3263122F32D9F0089DF1B /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262922F32D9F0089DF1B /* SocketIO.framework */; };
+		6BD3263222F32D9F0089DF1B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262A22F32D9F0089DF1B /* SnapKit.framework */; };
+		6BD3263322F32D9F0089DF1B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262B22F32D9F0089DF1B /* RxCocoa.framework */; };
+		6BD3263422F32D9F0089DF1B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262C22F32D9F0089DF1B /* Starscream.framework */; };
+		6BD3263522F32D9F0089DF1B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD3262D22F32D9F0089DF1B /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,16 @@
 		6BD3260F22F328F70089DF1B /* ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD3261322F328F70089DF1B /* ChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUITests.swift; sourceTree = "<group>"; };
 		6BD3261522F328F70089DF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD3262322F32C490089DF1B /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
+		6BD3262422F32C540089DF1B /* output.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
+		6BD3262622F32D9F0089DF1B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		6BD3262722F32D9F0089DF1B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		6BD3262822F32D9F0089DF1B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		6BD3262922F32D9F0089DF1B /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
+		6BD3262A22F32D9F0089DF1B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		6BD3262B22F32D9F0089DF1B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		6BD3262C22F32D9F0089DF1B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		6BD3262D22F32D9F0089DF1B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD3262E22F32D9F0089DF1B /* RxDataSources.framework in Frameworks */,
+				6BD3262F22F32D9F0089DF1B /* RxRelay.framework in Frameworks */,
+				6BD3263022F32D9F0089DF1B /* Differentiator.framework in Frameworks */,
+				6BD3263122F32D9F0089DF1B /* SocketIO.framework in Frameworks */,
+				6BD3263222F32D9F0089DF1B /* SnapKit.framework in Frameworks */,
+				6BD3263322F32D9F0089DF1B /* RxCocoa.framework in Frameworks */,
+				6BD3263422F32D9F0089DF1B /* Starscream.framework in Frameworks */,
+				6BD3263522F32D9F0089DF1B /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +103,13 @@
 		6BD325E722F328F60089DF1B = {
 			isa = PBXGroup;
 			children = (
+				6BD3262422F32C540089DF1B /* output.xcfilelist */,
+				6BD3262322F32C490089DF1B /* input.xcfilelist */,
 				6BD325F222F328F60089DF1B /* Chat */,
 				6BD3260722F328F70089DF1B /* ChatTests */,
 				6BD3261222F328F70089DF1B /* ChatUITests */,
 				6BD325F122F328F60089DF1B /* Products */,
+				6BD3262522F32D9F0089DF1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +154,21 @@
 			path = ChatUITests;
 			sourceTree = "<group>";
 		};
+		6BD3262522F32D9F0089DF1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3262822F32D9F0089DF1B /* Differentiator.framework */,
+				6BD3262B22F32D9F0089DF1B /* RxCocoa.framework */,
+				6BD3262622F32D9F0089DF1B /* RxDataSources.framework */,
+				6BD3262722F32D9F0089DF1B /* RxRelay.framework */,
+				6BD3262D22F32D9F0089DF1B /* RxSwift.framework */,
+				6BD3262A22F32D9F0089DF1B /* SnapKit.framework */,
+				6BD3262922F32D9F0089DF1B /* SocketIO.framework */,
+				6BD3262C22F32D9F0089DF1B /* Starscream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +179,7 @@
 				6BD325EC22F328F60089DF1B /* Sources */,
 				6BD325ED22F328F60089DF1B /* Frameworks */,
 				6BD325EE22F328F60089DF1B /* Resources */,
+				6BD3262222F32C180089DF1B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +295,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BD3262222F32C180089DF1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BD325EC22F328F60089DF1B /* Sources */ = {
@@ -433,6 +500,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +521,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

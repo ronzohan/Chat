@@ -1,0 +1,4 @@
+github "socketio/socket.io-client-swift" ~> 15.1.0
+github "ReactiveX/RxSwift" ~> 5.0
+github "SnapKit/SnapKit" ~> 5.0.0
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
