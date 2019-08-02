@@ -26,19 +26,17 @@ class BaseAPIManager {
 class APIManager: BaseAPIManager {
     static let shared = APIManager()
 
-//    func login(mobileNumber: String, password: String) -> Observable<Result<LoginResponse>> {
-//        enum Parameters: String {
-//            case mobileNumber = "phone_number"
-//            case password
-//            case type // Admin - 1 Patient - 2 Doctor - 3
-//        }
-//
-//        let parameters: [String: Any] = [
-//            Parameters.mobileNumber.rawValue: mobileNumber,
-//            Parameters.password.rawValue: password,
-//            Parameters.type.rawValue: 2
-//        ]
-//
-//        return send(endpoint: AuthEndpoint.login, parameters: parameters)
-//    }
+    func login(mobileNumber: String, password: String) -> Observable<Result<LoginResponse>> {
+        enum Parameters: String {
+            case mobileNumber = "email"
+            case password
+        }
+
+        let parameters: [String: Any] = [
+            Parameters.mobileNumber.rawValue: mobileNumber,
+            Parameters.password.rawValue: password,
+        ]
+
+        return send(endpoint: AuthEndpoint.login, parameters: parameters)
+    }
 }

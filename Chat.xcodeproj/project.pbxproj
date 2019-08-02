@@ -40,6 +40,10 @@
 		6BE6985022F485D700F5ED53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984F22F485D700F5ED53 /* Result.swift */; };
 		6BE6985322F4861F00F5ED53 /* ResponseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */; };
 		6BE6985522F4868300F5ED53 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985422F4868300F5ED53 /* AuthManager.swift */; };
+		6BE6985822F487DB00F5ED53 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985722F487DB00F5ED53 /* LoginResponse.swift */; };
+		6BE6985A22F4886900F5ED53 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985922F4886900F5ED53 /* LoginData.swift */; };
+		6BE6985C22F488C200F5ED53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985B22F488C200F5ED53 /* User.swift */; };
+		6BE6985E22F4892500F5ED53 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,10 @@
 		6BE6984F22F485D700F5ED53 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseInfo.swift; sourceTree = "<group>"; };
 		6BE6985422F4868300F5ED53 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		6BE6985722F487DB00F5ED53 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		6BE6985922F4886900F5ED53 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		6BE6985B22F488C200F5ED53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,15 +256,15 @@
 		6BE6983922F4851300F5ED53 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				6BE6985122F4861800F5ED53 /* Models */,
-				6BE6984922F485A700F5ED53 /* Manager */,
-				6BE6984622F4859200F5ED53 /* Endpoint */,
 				6BE6983A22F4853600F5ED53 /* APIClient.swift */,
 				6BE6983C22F4854700F5ED53 /* APIConfig.swift */,
 				6BE6983E22F4855700F5ED53 /* HTTPMethod.swift */,
 				6BE6984022F4856300F5ED53 /* Request.swift */,
 				6BE6984222F4857700F5ED53 /* URLSessionDataTaskProtocol.swift */,
 				6BE6984422F4858300F5ED53 /* URLSessionProtocol.swift */,
+				6BE6984622F4859200F5ED53 /* Endpoint */,
+				6BE6984922F485A700F5ED53 /* Manager */,
+				6BE6985122F4861800F5ED53 /* Models */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				6BE6984722F4859800F5ED53 /* Endpoint.swift */,
+				6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -290,9 +299,20 @@
 		6BE6985122F4861800F5ED53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6BE6985622F487D300F5ED53 /* Responses */,
 				6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */,
+				6BE6985922F4886900F5ED53 /* LoginData.swift */,
+				6BE6985B22F488C200F5ED53 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6BE6985622F487D300F5ED53 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6985722F487DB00F5ED53 /* LoginResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,7 +471,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE6984822F4859800F5ED53 /* Endpoint.swift in Sources */,
+				6BE6985E22F4892500F5ED53 /* AuthEndpoint.swift in Sources */,
 				6BE6982B22F47FDC00F5ED53 /* ViewControllerFactory.swift in Sources */,
+				6BE6985A22F4886900F5ED53 /* LoginData.swift in Sources */,
 				6BD325F622F328F60089DF1B /* ViewController.swift in Sources */,
 				6BE6984322F4857700F5ED53 /* URLSessionDataTaskProtocol.swift in Sources */,
 				6BE6982E22F4803200F5ED53 /* UIViewController+NibInstantiated.swift in Sources */,
@@ -459,11 +481,13 @@
 				6BE6984122F4856300F5ED53 /* Request.swift in Sources */,
 				6BE6983422F4815000F5ED53 /* LoginViewController.swift in Sources */,
 				6BE6983D22F4854700F5ED53 /* APIConfig.swift in Sources */,
+				6BE6985C22F488C200F5ED53 /* User.swift in Sources */,
 				6BE6984D22F485B700F5ED53 /* BaseAPIManagerProtocol.swift in Sources */,
 				6BE6984522F4858300F5ED53 /* URLSessionProtocol.swift in Sources */,
 				6BD325F422F328F60089DF1B /* AppDelegate.swift in Sources */,
 				6BE6983622F484DC00F5ED53 /* LoginRepository.swift in Sources */,
 				6BE6984B22F485AD00F5ED53 /* APIManager.swift in Sources */,
+				6BE6985822F487DB00F5ED53 /* LoginResponse.swift in Sources */,
 				6BE6985522F4868300F5ED53 /* AuthManager.swift in Sources */,
 				6BE6985322F4861F00F5ED53 /* ResponseInfo.swift in Sources */,
 				6BE6985022F485D700F5ED53 /* Result.swift in Sources */,

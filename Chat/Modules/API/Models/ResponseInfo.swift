@@ -10,17 +10,17 @@ import Foundation
 
 struct ResponseInfo: Codable {
     enum CodingKeys: String, CodingKey {
-        case success
+        case statusCode
         case message
         case error
     }
 
-    let success: Bool?
-    let message: String?
+    let statusCode: Int
+    let message: String
     let error: String?
 
-    init(success: Bool?, message: String?, error: String? = nil) {
-        self.success = success
+    init(statusCode: Int, message: String, error: String? = nil) {
+        self.statusCode = statusCode
         self.message = message
         self.error = error
     }
