@@ -9,8 +9,8 @@
 import Foundation
 
 struct LoginData: Codable {
-    let id: String
-    let userID: String
+    let _id: String
+    let userId: String
     let accessToken: String
     let refreshToken: String
     let pushToken: String?

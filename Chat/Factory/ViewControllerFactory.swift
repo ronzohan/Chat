@@ -12,6 +12,7 @@ import UIKit
 struct ViewControllerFactory {
     static func makeLoginViewController() -> LoginViewController {
         let viewController = LoginViewController.instantiateFromNib()
+        viewController.viewModel = LoginViewModel(repository: LoginRepository())
         return viewController 
     }
 }

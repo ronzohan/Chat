@@ -46,19 +46,20 @@ extension Request {
 
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
-
         request.timeoutInterval = TimeInterval(60)
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-
+        
         switch endpoint.method {
         case .post:
             if !parameters.isEmpty {
-                let parametersArrayString = parameters.compactMap { (key, value) -> String? in
-                    "\(key)=\(value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+                do {
+                    request.httpBody = try JSONSerialization.data(withJSONObject: parameters,
+                                                                  options: .prettyPrinted)
+                } catch let error  {
+                    debugPrint(error)
                 }
-                request.httpBody = parametersArrayString.joined(separator: "&").data(using: .utf8)
             }
-            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         default:
             break
         }

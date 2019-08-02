@@ -9,9 +9,9 @@
 import Foundation
 
 struct User: Codable {
-    let id, username, phone, firstName: String
+    let _id, username, phone, firstName: String
     let lastName, createdAt, updatedAt, birthdate: String
-    let country, coverPhotoURL, profilePhotoURL, city: String
+    let country, coverPhotoUrl, profilePhotoUrl, city: String
     let emailVerified: Bool
     let verificationCode: String
     let isOnline, isActive, isAvailable, isVerified: Bool

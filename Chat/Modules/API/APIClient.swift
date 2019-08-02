@@ -102,6 +102,9 @@ class APIClient {
             urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
 
+        urlRequest.addValue(APIConfig.shared.appID, forHTTPHeaderField: "APPID")
+        urlRequest.addValue("ios", forHTTPHeaderField: "platform")
+        urlRequest.addValue("1.0.64", forHTTPHeaderField: "version")
         return urlRequest
     }
 }
