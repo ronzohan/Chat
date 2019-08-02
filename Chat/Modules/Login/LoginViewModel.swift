@@ -9,5 +9,19 @@
 import Foundation
 
 class LoginViewModel {
-    
+    struct Input {
+
+    }
+
+    struct Output {
+
+    }
+
+    private let dispoeBag = DisposeBag()
+    let input: Input
+    let output: Output
+
+    init() {
+
+    }
 }
