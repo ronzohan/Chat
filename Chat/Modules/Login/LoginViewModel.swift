@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class LoginViewModel {
     struct Input {
@@ -22,6 +23,7 @@ class LoginViewModel {
     let output: Output
 
     init() {
-
+        input = Input()
+        output = Output()
     }
 }
