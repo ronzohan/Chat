@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  HTTPMethod.swift
 //  Chat
 //
 //  Created by Ron Daryl Magno on 02/08/2019.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-class LoginViewController: UIViewController {
-    var viewModel: LoginViewModel?
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
 }

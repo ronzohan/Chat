@@ -26,6 +26,20 @@
 		6BE6982E22F4803200F5ED53 /* UIViewController+NibInstantiated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6982D22F4803200F5ED53 /* UIViewController+NibInstantiated.swift */; };
 		6BE6983222F4814600F5ED53 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE6983122F4814600F5ED53 /* LoginViewController.xib */; };
 		6BE6983422F4815000F5ED53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983322F4815000F5ED53 /* LoginViewController.swift */; };
+		6BE6983622F484DC00F5ED53 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983522F484DC00F5ED53 /* LoginRepository.swift */; };
+		6BE6983822F484E600F5ED53 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983722F484E600F5ED53 /* LoginViewModel.swift */; };
+		6BE6983B22F4853600F5ED53 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983A22F4853600F5ED53 /* APIClient.swift */; };
+		6BE6983D22F4854700F5ED53 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983C22F4854700F5ED53 /* APIConfig.swift */; };
+		6BE6983F22F4855700F5ED53 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6983E22F4855700F5ED53 /* HTTPMethod.swift */; };
+		6BE6984122F4856300F5ED53 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984022F4856300F5ED53 /* Request.swift */; };
+		6BE6984322F4857700F5ED53 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984222F4857700F5ED53 /* URLSessionDataTaskProtocol.swift */; };
+		6BE6984522F4858300F5ED53 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984422F4858300F5ED53 /* URLSessionProtocol.swift */; };
+		6BE6984822F4859800F5ED53 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984722F4859800F5ED53 /* Endpoint.swift */; };
+		6BE6984B22F485AD00F5ED53 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984A22F485AD00F5ED53 /* APIManager.swift */; };
+		6BE6984D22F485B700F5ED53 /* BaseAPIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984C22F485B700F5ED53 /* BaseAPIManagerProtocol.swift */; };
+		6BE6985022F485D700F5ED53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6984F22F485D700F5ED53 /* Result.swift */; };
+		6BE6985322F4861F00F5ED53 /* ResponseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */; };
+		6BE6985522F4868300F5ED53 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985422F4868300F5ED53 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +87,20 @@
 		6BE6982D22F4803200F5ED53 /* UIViewController+NibInstantiated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiated.swift"; sourceTree = "<group>"; };
 		6BE6983122F4814600F5ED53 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6BE6983322F4815000F5ED53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6BE6983522F484DC00F5ED53 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		6BE6983722F484E600F5ED53 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6BE6983A22F4853600F5ED53 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		6BE6983C22F4854700F5ED53 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		6BE6983E22F4855700F5ED53 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		6BE6984022F4856300F5ED53 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		6BE6984222F4857700F5ED53 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		6BE6984422F4858300F5ED53 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		6BE6984722F4859800F5ED53 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6BE6984A22F485AD00F5ED53 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6BE6984C22F485B700F5ED53 /* BaseAPIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIManagerProtocol.swift; sourceTree = "<group>"; };
+		6BE6984F22F485D700F5ED53 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseInfo.swift; sourceTree = "<group>"; };
+		6BE6985422F4868300F5ED53 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +227,8 @@
 		6BE6982F22F4813500F5ED53 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6BE6984E22F485CF00F5ED53 /* Common */,
+				6BE6983922F4851300F5ED53 /* API */,
 				6BE6983022F4813B00F5ED53 /* Login */,
 			);
 			path = Modules;
@@ -207,10 +237,62 @@
 		6BE6983022F4813B00F5ED53 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6BE6983122F4814600F5ED53 /* LoginViewController.xib */,
+				6BE6983522F484DC00F5ED53 /* LoginRepository.swift */,
 				6BE6983322F4815000F5ED53 /* LoginViewController.swift */,
+				6BE6983722F484E600F5ED53 /* LoginViewModel.swift */,
+				6BE6983122F4814600F5ED53 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6BE6983922F4851300F5ED53 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6985122F4861800F5ED53 /* Models */,
+				6BE6984922F485A700F5ED53 /* Manager */,
+				6BE6984622F4859200F5ED53 /* Endpoint */,
+				6BE6983A22F4853600F5ED53 /* APIClient.swift */,
+				6BE6983C22F4854700F5ED53 /* APIConfig.swift */,
+				6BE6983E22F4855700F5ED53 /* HTTPMethod.swift */,
+				6BE6984022F4856300F5ED53 /* Request.swift */,
+				6BE6984222F4857700F5ED53 /* URLSessionDataTaskProtocol.swift */,
+				6BE6984422F4858300F5ED53 /* URLSessionProtocol.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6BE6984622F4859200F5ED53 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6984722F4859800F5ED53 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		6BE6984922F485A700F5ED53 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6984A22F485AD00F5ED53 /* APIManager.swift */,
+				6BE6984C22F485B700F5ED53 /* BaseAPIManagerProtocol.swift */,
+				6BE6985422F4868300F5ED53 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6BE6984E22F485CF00F5ED53 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6984F22F485D700F5ED53 /* Result.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6BE6985122F4861800F5ED53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6985222F4861F00F5ED53 /* ResponseInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,11 +450,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE6984822F4859800F5ED53 /* Endpoint.swift in Sources */,
 				6BE6982B22F47FDC00F5ED53 /* ViewControllerFactory.swift in Sources */,
 				6BD325F622F328F60089DF1B /* ViewController.swift in Sources */,
+				6BE6984322F4857700F5ED53 /* URLSessionDataTaskProtocol.swift in Sources */,
 				6BE6982E22F4803200F5ED53 /* UIViewController+NibInstantiated.swift in Sources */,
+				6BE6983B22F4853600F5ED53 /* APIClient.swift in Sources */,
+				6BE6984122F4856300F5ED53 /* Request.swift in Sources */,
 				6BE6983422F4815000F5ED53 /* LoginViewController.swift in Sources */,
+				6BE6983D22F4854700F5ED53 /* APIConfig.swift in Sources */,
+				6BE6984D22F485B700F5ED53 /* BaseAPIManagerProtocol.swift in Sources */,
+				6BE6984522F4858300F5ED53 /* URLSessionProtocol.swift in Sources */,
 				6BD325F422F328F60089DF1B /* AppDelegate.swift in Sources */,
+				6BE6983622F484DC00F5ED53 /* LoginRepository.swift in Sources */,
+				6BE6984B22F485AD00F5ED53 /* APIManager.swift in Sources */,
+				6BE6985522F4868300F5ED53 /* AuthManager.swift in Sources */,
+				6BE6985322F4861F00F5ED53 /* ResponseInfo.swift in Sources */,
+				6BE6985022F485D700F5ED53 /* Result.swift in Sources */,
+				6BE6983F22F4855700F5ED53 /* HTTPMethod.swift in Sources */,
+				6BE6983822F484E600F5ED53 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
