@@ -9,10 +9,20 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
-    static func instantiateFromNib<T: UIViewController>(nibName: String? = String(describing: self),
-                                                        bundle: Bundle = .main) -> T {
-        let viewController = T(nibName: nibName, bundle: bundle)
+protocol NibInstantiated {
+    static var identifier: String { get }
+}
+
+extension NibInstantiated where Self: UIViewController {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static func instantiateFromNib(nibName: String? = identifier,
+                                   bundle: Bundle = .main) -> Self {
+        let viewController = Self(nibName: nibName, bundle: bundle)
         return viewController
     }
 }
+
+extension UIViewController: NibInstantiated {}
