@@ -17,9 +17,10 @@ struct User: Codable {
     let isOnline, isActive, isAvailable, isVerified: Bool
     let phoneFormats: [String]
     let phoneCountry, wentOnlineDate, wentOfflineDate: String
-    let isBlocked, hasChangedUsername: Bool
-    let gender, subscribersCount: Int
-    let isFollowing, isFollower, isFriend: Bool
-    let friendsCount: Int
-    let about: String
+    let hasChangedUsername: Bool?
+    let isBlocked: Bool?
+    let gender, subscribersCount: Int?
+    let isFollowing, isFollower, isFriend: Bool?
+    let friendsCount: Int?
+    let about: String?
 }

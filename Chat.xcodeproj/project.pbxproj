@@ -44,6 +44,12 @@
 		6BE6985A22F4886900F5ED53 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985922F4886900F5ED53 /* LoginData.swift */; };
 		6BE6985C22F488C200F5ED53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985B22F488C200F5ED53 /* User.swift */; };
 		6BE6985E22F4892500F5ED53 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */; };
+		6BE6986122F4919D00F5ED53 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6986022F4919D00F5ED53 /* ChatViewController.swift */; };
+		6BE6986422F491C500F5ED53 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6986322F491C500F5ED53 /* FriendsViewController.swift */; };
+		6BEED0D922F711DF000978A1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEED0D822F711DF000978A1 /* ChatViewModel.swift */; };
+		6BEED0DB22F71232000978A1 /* ChatEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEED0DA22F71232000978A1 /* ChatEndpoint.swift */; };
+		6BEED0DD22F71785000978A1 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEED0DC22F71785000978A1 /* ChatViewController.xib */; };
+		6BEED0DF22F727B1000978A1 /* SocketEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEED0DE22F727B1000978A1 /* SocketEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,12 @@
 		6BE6985922F4886900F5ED53 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		6BE6985B22F488C200F5ED53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		6BE6986022F4919D00F5ED53 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6BE6986322F491C500F5ED53 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		6BEED0D822F711DF000978A1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		6BEED0DA22F71232000978A1 /* ChatEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEndpoint.swift; sourceTree = "<group>"; };
+		6BEED0DC22F71785000978A1 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		6BEED0DE22F727B1000978A1 /* SocketEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +247,8 @@
 		6BE6982F22F4813500F5ED53 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6BE6986222F491BC00F5ED53 /* Friends */,
+				6BE6985F22F4912000F5ED53 /* Chat */,
 				6BE6984E22F485CF00F5ED53 /* Common */,
 				6BE6983922F4851300F5ED53 /* API */,
 				6BE6983022F4813B00F5ED53 /* Login */,
@@ -274,6 +288,8 @@
 			children = (
 				6BE6984722F4859800F5ED53 /* Endpoint.swift */,
 				6BE6985D22F4892500F5ED53 /* AuthEndpoint.swift */,
+				6BEED0DA22F71232000978A1 /* ChatEndpoint.swift */,
+				6BEED0DE22F727B1000978A1 /* SocketEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -313,6 +329,24 @@
 				6BE6985722F487DB00F5ED53 /* LoginResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		6BE6985F22F4912000F5ED53 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6986022F4919D00F5ED53 /* ChatViewController.swift */,
+				6BEED0D822F711DF000978A1 /* ChatViewModel.swift */,
+				6BEED0DC22F71785000978A1 /* ChatViewController.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		6BE6986222F491BC00F5ED53 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6986322F491C500F5ED53 /* FriendsViewController.swift */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +457,7 @@
 				6BE6983222F4814600F5ED53 /* LoginViewController.xib in Resources */,
 				6BD325FE22F328F70089DF1B /* LaunchScreen.storyboard in Resources */,
 				6BD325FB22F328F70089DF1B /* Assets.xcassets in Resources */,
+				6BEED0DD22F71785000978A1 /* ChatViewController.xib in Resources */,
 				6BD325F922F328F60089DF1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,16 +505,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEED0D922F711DF000978A1 /* ChatViewModel.swift in Sources */,
 				6BE6984822F4859800F5ED53 /* Endpoint.swift in Sources */,
 				6BE6985E22F4892500F5ED53 /* AuthEndpoint.swift in Sources */,
 				6BE6982B22F47FDC00F5ED53 /* ViewControllerFactory.swift in Sources */,
 				6BE6985A22F4886900F5ED53 /* LoginData.swift in Sources */,
 				6BD325F622F328F60089DF1B /* ViewController.swift in Sources */,
+				6BEED0DB22F71232000978A1 /* ChatEndpoint.swift in Sources */,
 				6BE6984322F4857700F5ED53 /* URLSessionDataTaskProtocol.swift in Sources */,
 				6BE6982E22F4803200F5ED53 /* UIViewController+NibInstantiated.swift in Sources */,
+				6BEED0DF22F727B1000978A1 /* SocketEndpoint.swift in Sources */,
 				6BE6983B22F4853600F5ED53 /* APIClient.swift in Sources */,
 				6BE6984122F4856300F5ED53 /* Request.swift in Sources */,
 				6BE6983422F4815000F5ED53 /* LoginViewController.swift in Sources */,
+				6BE6986122F4919D00F5ED53 /* ChatViewController.swift in Sources */,
+				6BE6986422F491C500F5ED53 /* FriendsViewController.swift in Sources */,
 				6BE6983D22F4854700F5ED53 /* APIConfig.swift in Sources */,
 				6BE6985C22F488C200F5ED53 /* User.swift in Sources */,
 				6BE6984D22F485B700F5ED53 /* BaseAPIManagerProtocol.swift in Sources */,

@@ -44,5 +44,14 @@ class LoginViewController: UIViewController {
         loginButton.rx.tap
             .bind(to: viewModel.input.login)
             .disposed(by: disposeBag)
+
+        viewModel.output.loginData
+            .drive(onNext: { [weak self] data in
+                if data != nil {
+                    let chatViewController = ViewControllerFactory.makeChatViewController()
+                    self?.navigationController?.pushViewController(chatViewController, animated: true)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

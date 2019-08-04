@@ -17,8 +17,9 @@ protocol Request {
 }
 
 extension Request {
-    func urlRequest(withBaseURL baseURL: URL) -> URLRequest {
-        guard var components = URLComponents(url: baseURL.appendingPathComponent(endpoint.path),
+    func urlRequest() -> URLRequest {
+        guard let baseURL = URL(string: endpoint.basePath),
+            var components = URLComponents(url: baseURL.appendingPathComponent(endpoint.path),
                                              resolvingAgainstBaseURL: false)
             else {
                 fatalError("Unable to create URL components")

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class LoginViewModel {
     struct Input {
@@ -17,7 +18,7 @@ class LoginViewModel {
     }
 
     struct Output {
-
+        let loginData: Driver<LoginData?>
     }
 
     private let disposeBag = DisposeBag()
@@ -28,14 +29,18 @@ class LoginViewModel {
     private let mobileNumberSubject =  PublishSubject<String>()
     private let passwordSubject = PublishSubject<String>()
 
-    private let repository: LoginRepository
+    private let loginDataSubject = PublishSubject<LoginData?>()
 
-    init(repository: LoginRepository) {
+    private let repository: LoginRepository
+    private let authManager: AuthManagerProtocol
+
+    init(repository: LoginRepository, authManager: AuthManagerProtocol) {
         self.repository = repository
+        self.authManager = authManager
         input = Input(login: loginSubject.asObserver(),
                       mobileNumber: mobileNumberSubject.asObserver(),
                       password: passwordSubject.asObserver())
-        output = Output()
+        output = Output(loginData: loginDataSubject.asDriver(onErrorJustReturn: nil))
         setupBinding()
     }
 
@@ -43,10 +48,19 @@ class LoginViewModel {
         loginSubject
             .withLatestFrom(Observable.combineLatest(mobileNumberSubject, passwordSubject))
             .flatMap { [repository] in repository.login(mobileNumber: $0, password: $1) }
-            .subscribe(onNext: { result in
+            .do(onNext: { [weak self] result in
                 switch result {
                 case .success(let response):
-                    debugPrint(response)
+                    self?.authManager.userToken = response.data.accessToken
+                case .failure:
+                    break
+                }
+            })
+            .flatMap { [repository] _ in repository.easyLogin() }
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let response):
+                    self?.loginDataSubject.onNext(response.data)
                 case .failure:
                     break
                 }

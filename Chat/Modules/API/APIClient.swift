@@ -13,12 +13,10 @@ class APIClient {
     var authManager: AuthManagerProtocol?
     var appToken: String?
 
-    private(set) var baseURL: URL
     private var dateFormatter = DateFormatter()
     private var session: URLSessionProtocol
 
-    init(baseURL: String, session: URLSessionProtocol = URLSession.shared, authManager: AuthManagerProtocol) {
-        self.baseURL = URL(string: baseURL)!
+    init(session: URLSessionProtocol = URLSession.shared, authManager: AuthManagerProtocol) {
         self.session = session
         self.authManager = authManager
 
@@ -95,16 +93,17 @@ class APIClient {
     }
 
     func urlRequest(for request: Request) -> URLRequest {
-        var urlRequest = request.urlRequest(withBaseURL: baseURL)
+        var urlRequest = request.urlRequest()
 
         // Add Authorization Header if the Request needs authorization
         if let token = authManager?.userToken, request.endpoint.authNeeded {
-            urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            urlRequest.addValue("\(token)", forHTTPHeaderField: "Authorization")
         }
 
-        urlRequest.addValue(APIConfig.shared.appID, forHTTPHeaderField: "APPID")
-        urlRequest.addValue("ios", forHTTPHeaderField: "platform")
-        urlRequest.addValue("1.0.64", forHTTPHeaderField: "version")
+        request.endpoint.commonHeader.forEach { (header) in
+            urlRequest.addValue(header.value, forHTTPHeaderField: header.key)
+        }
+
         return urlRequest
     }
 }

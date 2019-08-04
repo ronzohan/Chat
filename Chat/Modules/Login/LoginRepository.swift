@@ -11,6 +11,12 @@ import RxSwift
 
 class LoginRepository {
     func login(mobileNumber: String, password: String) -> Observable<Result<LoginResponse>> {
-        return APIManager.shared.login(mobileNumber: mobileNumber, password: password)
+        return APIManager
+            .shared
+            .login(mobileNumber: mobileNumber, password: password)
+    }
+
+    func easyLogin() -> Observable<Result<LoginResponse>> {
+        return APIManager.shared.easyLogin()
     }
 }

@@ -8,12 +8,12 @@
 
 import Foundation
 import RxSwift
+import SocketIO
 
 class BaseAPIManager {
     let apiClient: APIClient
 
-    init(client: APIClient = APIClient(baseURL: APIConfig.shared.baseURL,
-                                       authManager: AuthManager.shared)) {
+    init(client: APIClient = APIClient(authManager: AuthManager.shared)) {
         apiClient = client
     }
 
@@ -38,5 +38,9 @@ class APIManager: BaseAPIManager {
         ]
 
         return send(endpoint: AuthEndpoint.login, parameters: parameters)
+    }
+
+    func easyLogin() -> Observable<Result<LoginResponse>> {
+        return send(endpoint: AuthEndpoint.easyLogin, parameters: [:])
     }
 }

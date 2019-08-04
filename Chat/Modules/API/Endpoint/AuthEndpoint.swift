@@ -10,6 +10,7 @@ import Foundation
 
 enum AuthEndpoint {
     case login
+    case easyLogin
 }
 
 extension AuthEndpoint: Endpoint {
@@ -17,14 +18,35 @@ extension AuthEndpoint: Endpoint {
         switch self {
         case .login:
             return "/auth/login"
+        case .easyLogin:
+            return "/auth/easy-login"
+        }
+    }
+
+    var basePath: String {
+        switch self {
+        case .login:
+            return APIConfig.shared.baseURL3
+        case .easyLogin:
+            return APIConfig.shared.baseURL3
         }
     }
 
     var method: HTTPMethod {
-        return .post
+        switch self {
+        case .easyLogin:
+            return .get
+        default:
+            return .post
+        }
     }
 
     var authNeeded: Bool {
-        return false
+        switch self {
+        case .easyLogin:
+            return true
+        default:
+            return false
+        }
     }
 }
